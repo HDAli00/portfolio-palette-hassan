@@ -30,7 +30,7 @@ const AboutSection = () => {
             </p>
             <p className="text-portfolio-text leading-relaxed">
               When I'm not working with data, I enjoy keeping up with the latest advancements in big data 
-              technologies, writing blogs on topics that interest me and mentoring aspiring data engineers.
+              technologies, writing blogs on interesting topics and mentoring aspiring data engineers.
             </p>
           </div>
           
