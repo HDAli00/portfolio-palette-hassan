@@ -3,10 +3,10 @@ import React from 'react';
 import { Database, Server, BarChart, Layers } from 'lucide-react';
 
 const technologies = [
-  { category: "Data Engineering", skills: ["Python", "SQL", "PySpark", "Airflow", "Kafka", "Hadoop", "ETL/ELT"] },
-  { category: "Cloud & Big Data", skills: ["AWS", "Azure", "Snowflake", "Databricks", "Azure Data Factory", "Google BigQuery"] },
-  { category: "Databases", skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB", "SQL Server"] },
-  { category: "Others", skills: ["Docker", "Kubernetes", "CI/CD", "Git", "Jenkins", "Terraform", "Linux/Unix"] },
+  { category: "Data Engineering", skills: ["Python", "SQL", "PySpark", "Airflow", "ETL/ELT"] },
+  { category: "Cloud & Big Data", skills: ["Azure", "Databricks", "Azure Data Factory", "Azure Synapse", "Azure DevOps"] },
+  { category: "Databases", skills: ["PostgreSQL", "MySQL", "DynamoDB", "SQL Server"] },
+  { category: "Others", skills: ["Docker", "CI/CD", "Git", "Terraform"] },
 ];
 
 const AboutSection = () => {
@@ -30,7 +30,7 @@ const AboutSection = () => {
             </p>
             <p className="text-portfolio-text leading-relaxed">
               When I'm not working with data, I enjoy keeping up with the latest advancements in big data 
-              technologies, contributing to open-source projects, and mentoring aspiring data engineers.
+              technologies, writing blogs on topics that interest me and mentoring aspiring data engineers.
             </p>
           </div>
           
