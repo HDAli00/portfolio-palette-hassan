@@ -1,7 +1,8 @@
 
 import React from 'react';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, FileDown } from 'lucide-react';
 import { Link as ScrollLink } from 'react-scroll';
+import { Button } from './ui/button';
 
 const HeroSection = () => {
   return (
@@ -49,6 +50,14 @@ const HeroSection = () => {
                 className="flex items-center gap-2 bg-portfolio-secondary hover:bg-portfolio-secondary/80 text-portfolio-text px-4 py-2 rounded-md transition-colors"
               >
                 <Mail size={20} /> Contact
+              </a>
+              <a 
+                href="/resume.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-portfolio-accent hover:bg-portfolio-accent/80 text-white px-4 py-2 rounded-md transition-colors"
+              >
+                <FileDown size={20} /> Download Resume
               </a>
             </div>
             
