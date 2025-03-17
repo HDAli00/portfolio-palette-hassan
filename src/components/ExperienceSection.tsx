@@ -4,55 +4,56 @@ import { Link2, ExternalLink } from 'lucide-react';
 
 const experiences = [
   {
-    title: "Senior Software Engineer",
-    company: "Zego",
-    period: "January 2022 - Present",
+    title: "Lead Data Engineer",
+    company: "Chapsea Group",
+    period: "June 2023 - Present",
     location: "London, UK",
     description: [
-      "Lead full-stack development for core insurance products using React, TypeScript, and Node.js",
-      "Built and maintained microservices architecture with Kubernetes and Docker",
-      "Improved system performance resulting in 40% faster page load times",
-      "Mentored junior developers and conducted code reviews to ensure code quality"
+      "Building a multi-million-dollar data infrastructure from scratch, implementing data pipelines and ETL processes",
+      "Designing and developing a data warehouse using Snowflake and integrating with various data sources",
+      "Leading a team of data engineers and setting technical direction for data initiatives",
+      "Implementing data quality frameworks and governance policies"
     ],
-    link: "https://www.zego.com"
+    link: "https://www.chapsea.com"
   },
   {
-    title: "Full Stack Developer",
-    company: "Onfido",
-    period: "March 2019 - December 2021",
-    location: "London, UK",
+    title: "Senior Data Engineer",
+    company: "Lendi Group",
+    period: "September 2021 - June 2023",
+    location: "Sydney, Australia",
     description: [
-      "Developed front-end components for identity verification platform using Angular and Vue.js",
-      "Created RESTful APIs with Node.js, Express and MongoDB",
-      "Implemented automated testing strategies using Jest and Cypress",
-      "Collaborated with designers to enhance user experience across web platforms"
+      "Developed and maintained ETL pipelines using Python, Spark, and Airflow",
+      "Built real-time data processing systems with Kafka and AWS services",
+      "Implemented data models in Snowflake for business intelligence and analytics",
+      "Collaborated with data scientists to create machine learning pipelines"
     ],
-    link: "https://www.onfido.com"
+    link: "https://www.lendi.com.au"
   },
   {
-    title: "Software Developer",
-    company: "Revolut",
-    period: "June 2017 - February 2019",
-    location: "London, UK",
+    title: "Data Engineer",
+    company: "Domain Group",
+    period: "February 2020 - August 2021",
+    location: "Sydney, Australia",
     description: [
-      "Built and maintained features for banking application using React Native",
-      "Developed backend services with Node.js and PostgreSQL",
-      "Contributed to continuous integration/delivery pipeline",
-      "Participated in agile development processes and sprint planning"
+      "Designed and implemented data ingestion pipelines from various sources",
+      "Created ETL workflows using Python, SQL, and AWS services",
+      "Developed data models for analytics and reporting purposes",
+      "Optimized database performance and query efficiency"
     ],
-    link: "https://www.revolut.com"
+    link: "https://www.domain.com.au"
   },
   {
-    title: "Web Developer",
-    company: "Freelance",
-    period: "January 2015 - May 2017",
-    location: "Remote",
+    title: "Data Analyst",
+    company: "Quantium",
+    period: "January 2018 - January 2020",
+    location: "Sydney, Australia",
     description: [
-      "Designed and developed responsive websites for small businesses",
-      "Built custom WordPress themes and plugins",
-      "Created e-commerce solutions using WooCommerce and Shopify",
-      "Provided ongoing maintenance and support for client websites"
-    ]
+      "Performed data analysis and created visualization dashboards using Tableau",
+      "Developed SQL queries for data extraction and analysis",
+      "Collaborated with business stakeholders to understand requirements and deliver insights",
+      "Provided data-driven recommendations to improve business processes"
+    ],
+    link: "https://www.quantium.com"
   }
 ];
 

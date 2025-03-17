@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { Code, Server, Star, Globe } from 'lucide-react';
+import { Database, Server, BarChart, Layers } from 'lucide-react';
 
 const technologies = [
-  { category: "Frontend", skills: ["React", "Angular", "Vue.js", "Next.js", "HTML5", "CSS3/SCSS", "JavaScript/TypeScript"] },
-  { category: "Backend", skills: ["Node.js", "Express", "NestJS", "Python", "PHP", "Laravel", "RESTful APIs", "GraphQL"] },
-  { category: "Mobile", skills: ["Flutter", "React Native", "iOS", "Android"] },
-  { category: "Others", skills: ["AWS", "Firebase", "Docker", "CI/CD", "Git", "PostgreSQL", "MongoDB", "Redis"] },
+  { category: "Data Engineering", skills: ["Python", "SQL", "PySpark", "Airflow", "Kafka", "Hadoop", "ETL/ELT"] },
+  { category: "Cloud & Big Data", skills: ["AWS", "Azure", "Snowflake", "Databricks", "Azure Data Factory", "Google BigQuery"] },
+  { category: "Databases", skills: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB", "SQL Server"] },
+  { category: "Others", skills: ["Docker", "Kubernetes", "CI/CD", "Git", "Jenkins", "Terraform", "Linux/Unix"] },
 ];
 
 const AboutSection = () => {
@@ -18,19 +18,19 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <p className="text-portfolio-text leading-relaxed mb-6">
-              I'm a Software Engineer with 8+ years of experience building web and mobile applications 
-              for startups and established companies. My journey in software development started with 
-              a deep curiosity about how digital products work and has evolved into a passion for 
-              creating elegant solutions to complex problems.
+              I'm a Data Engineer with expertise in designing and implementing data pipelines, ETL processes, 
+              and data warehousing solutions. My passion lies in transforming complex data challenges into 
+              efficient, scalable solutions that drive business value.
             </p>
             <p className="text-portfolio-text leading-relaxed mb-6">
-              I specialize in full-stack development, with a particular focus on creating seamless, 
-              responsive user experiences and robust backend architectures. My experience spans 
-              across various domains including fintech, e-commerce, and enterprise solutions.
+              With a strong foundation in both software engineering and data technologies, I bridge the gap 
+              between raw data and actionable insights. I've worked across various industries including finance, 
+              healthcare, and e-commerce, building data infrastructure that enables advanced analytics and 
+              machine learning applications.
             </p>
             <p className="text-portfolio-text leading-relaxed">
-              When I'm not coding, I enjoy staying up-to-date with the latest tech trends, 
-              contributing to open-source projects, and mentoring aspiring developers.
+              When I'm not working with data, I enjoy keeping up with the latest advancements in big data 
+              technologies, contributing to open-source projects, and mentoring aspiring data engineers.
             </p>
           </div>
           
@@ -38,11 +38,11 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="bg-portfolio-secondary p-5 rounded-lg">
                 <div className="bg-portfolio-primary/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Code size={24} className="text-portfolio-accent" />
+                  <Database size={24} className="text-portfolio-accent" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Frontend Development</h3>
+                <h3 className="text-lg font-semibold mb-2">Data Engineering</h3>
                 <p className="text-portfolio-muted text-sm">
-                  Creating responsive, interactive user interfaces with modern JavaScript frameworks.
+                  Building robust ETL pipelines and data processing systems with Python, Spark, and Airflow.
                 </p>
               </div>
               
@@ -50,29 +50,29 @@ const AboutSection = () => {
                 <div className="bg-portfolio-primary/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <Server size={24} className="text-portfolio-accent" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Backend Development</h3>
+                <h3 className="text-lg font-semibold mb-2">Cloud & Big Data</h3>
                 <p className="text-portfolio-muted text-sm">
-                  Building scalable APIs and services with Node.js and modern backend frameworks.
+                  Implementing scalable data solutions on AWS, Azure, and using technologies like Snowflake and Databricks.
                 </p>
               </div>
               
               <div className="bg-portfolio-secondary p-5 rounded-lg">
                 <div className="bg-portfolio-primary/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Globe size={24} className="text-portfolio-accent" />
+                  <BarChart size={24} className="text-portfolio-accent" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Mobile Development</h3>
+                <h3 className="text-lg font-semibold mb-2">Data Analytics</h3>
                 <p className="text-portfolio-muted text-sm">
-                  Developing cross-platform mobile applications using Flutter and React Native.
+                  Creating data models and analytics solutions to derive meaningful insights from complex datasets.
                 </p>
               </div>
               
               <div className="bg-portfolio-secondary p-5 rounded-lg">
                 <div className="bg-portfolio-primary/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Star size={24} className="text-portfolio-accent" />
+                  <Layers size={24} className="text-portfolio-accent" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Cloud Services</h3>
+                <h3 className="text-lg font-semibold mb-2">Data Architecture</h3>
                 <p className="text-portfolio-muted text-sm">
-                  Deploying and managing applications on AWS and other cloud platforms.
+                  Designing scalable and efficient data warehouses and data lakes for optimal performance.
                 </p>
               </div>
             </div>

@@ -4,36 +4,32 @@ import { ExternalLink, Github, Code, Link2 } from 'lucide-react';
 
 const projects = [
   {
-    title: "FinTech Dashboard",
-    description: "A comprehensive financial analytics dashboard built with React and D3.js, featuring real-time data visualization and user portfolio management.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    technologies: ["React", "TypeScript", "D3.js", "Firebase", "Material UI"],
-    live: "https://fintech-dashboard.example.com",
-    github: "https://github.com/hassandiv/fintech-dashboard"
+    title: "Data Pipeline Framework",
+    description: "A scalable ETL framework built with Python, Airflow, and AWS services to process terabytes of data from multiple sources into a centralized data warehouse.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    technologies: ["Python", "Airflow", "AWS", "Snowflake", "dbt"],
+    github: "https://github.com/HDAli00/data-pipeline-framework"
   },
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce solution with product management, cart functionality, and payment processing using Stripe integration.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    technologies: ["Angular", "Node.js", "MongoDB", "Express", "Stripe API"],
-    live: "https://shop.example.com",
-    github: "https://github.com/hassandiv/ecommerce-platform"
+    title: "Real-time Analytics Platform",
+    description: "A streaming data processing system using Kafka and Spark Streaming to provide real-time insights and anomaly detection for IoT device data.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    technologies: ["Kafka", "Spark", "Python", "Elasticsearch", "Kibana"],
+    github: "https://github.com/HDAli00/realtime-analytics"
   },
   {
-    title: "Health Tracking App",
-    description: "A mobile application for tracking health metrics, workout routines, and nutrition data with personalized insights.",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    technologies: ["Flutter", "Firebase", "RESTful API", "Google Fit API"],
-    live: "https://health-app.example.com",
-    github: "https://github.com/hassandiv/health-tracker"
+    title: "Data Quality Monitoring",
+    description: "An automated system to monitor data quality metrics, detect anomalies, and alert stakeholders about potential data issues before they impact business decisions.",
+    image: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3",
+    technologies: ["Python", "Pandas", "Great Expectations", "Docker", "Grafana"],
+    github: "https://github.com/HDAli00/data-quality-monitoring"
   },
   {
-    title: "Content Management System",
-    description: "A custom CMS built for digital content creators with advanced editing tools, media management, and SEO optimization.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    technologies: ["Vue.js", "Laravel", "MySQL", "GraphQL", "AWS S3"],
-    live: "https://cms.example.com",
-    github: "https://github.com/hassandiv/content-cms"
+    title: "Customer Data Platform",
+    description: "A comprehensive solution to collect, process, and analyze customer data from various touchpoints, creating unified customer profiles for marketing and analytics.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    technologies: ["Python", "AWS", "Redshift", "PostgreSQL", "Tableau"],
+    github: "https://github.com/HDAli00/customer-data-platform"
   }
 ];
 
@@ -94,16 +90,6 @@ const ProjectsSection = () => {
               </div>
               
               <div className="flex gap-4">
-                {project.live && (
-                  <a 
-                    href={project.live} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center text-sm text-portfolio-muted hover:text-portfolio-accent transition-colors"
-                  >
-                    <ExternalLink size={16} className="mr-1" /> Live Demo
-                  </a>
-                )}
                 {project.github && (
                   <a 
                     href={project.github} 

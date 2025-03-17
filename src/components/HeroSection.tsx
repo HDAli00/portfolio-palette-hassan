@@ -12,17 +12,17 @@ const HeroSection = () => {
             Hi, I'm <span className="text-portfolio-accent">Hassan Ali</span>
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-portfolio-muted mb-6">
-            Software Engineer
+            Data Engineer
           </h2>
           <p className="text-lg text-portfolio-muted mb-8 leading-relaxed">
-            A passionate full-stack developer with expertise in React, Angular, Node.js, 
-            Flutter, and cloud technologies. I build modern, responsive web and mobile applications 
-            with a focus on performance and user experience.
+            I'm a Data Engineer with a passion for transforming raw data into valuable insights.
+            Specializing in building scalable data pipelines, ETL processes, and data warehousing solutions
+            to help organizations make data-driven decisions.
           </p>
           
           <div className="flex flex-wrap gap-4 mb-8">
             <a 
-              href="https://github.com/hassandiv" 
+              href="https://github.com/HDAli00" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-portfolio-secondary hover:bg-portfolio-secondary/80 text-portfolio-text px-4 py-2 rounded-md transition-colors"
