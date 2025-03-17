@@ -1,69 +1,120 @@
-# Welcome to your Lovable project
 
-## Project info
+# Hassan Ali - Portfolio Website
 
-**URL**: https://lovable.dev/projects/d1464ec1-3593-432b-a7a4-46b3912d5d8e
+This repository contains the code for my personal portfolio website showcasing my work experience, projects, and skills as a Data Engineer.
 
-## How can I edit this code?
+![Portfolio Screenshot](/public/og-image.png)
 
-There are several ways of editing your application.
+## Live Demo
 
-**Use Lovable**
+Visit the live portfolio at: [hassanali.dev](https://lovable.dev/projects/d1464ec1-3593-432b-a7a4-46b3912d5d8e)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d1464ec1-3593-432b-a7a4-46b3912d5d8e) and start prompting.
+## Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+├── public/               # Static assets and images
+├── src/
+│   ├── components/       # Reusable UI components
+│   │   ├── ui/           # shadcn/ui components
+│   ├── lib/              # Utility functions
+│   ├── pages/            # Page components
+│   ├── hooks/            # Custom React hooks
+│   ├── App.tsx           # Main App component
+│   ├── main.tsx          # Entry point
+│   └── index.css         # Global styles
+├── index.html            # HTML entry point
+└── tailwind.config.ts    # Tailwind CSS configuration
 ```
 
-**Edit a file directly in GitHub**
+## Tech Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **React**: Frontend library for building user interfaces
+- **TypeScript**: For type-safe code
+- **Tailwind CSS**: Utility-first CSS framework
+- **Vite**: Build tool and development server
+- **shadcn/ui**: Accessible and customizable component library
+- **React Router**: For page navigation
+- **React Scroll**: For smooth scrolling to sections
+- **Lucide React**: For icons
 
-**Use GitHub Codespaces**
+## Getting Started
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Prerequisites
 
-## What technologies are used for this project?
+- Node.js (v16 or higher)
+- npm or yarn
 
-This project is built with .
+### Installation
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/HDAli00/HDAli.dev.git
+   cd HDAli.dev
+   ```
 
-## How can I deploy this project?
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/d1464ec1-3593-432b-a7a4-46b3912d5d8e) and click on Share -> Publish.
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-## I want to use a custom domain - is that possible?
+4. Open your browser and visit: `http://localhost:8080`
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+## Adding Your Resume
+
+1. Add your resume PDF file to the public folder:
+   ```bash
+   # Ensure it's named resume.pdf
+   public/resume.pdf
+   ```
+
+## Customizing the Portfolio
+
+### Personal Information
+
+To update your personal information, edit the following files:
+
+- `src/components/HeroSection.tsx`: Update your name, bio, and contact links
+- `src/components/AboutSection.tsx`: Update your about me section
+- `src/components/ExperienceSection.tsx`: Update your work experience
+- `src/components/ProjectsSection.tsx`: Update your projects
+- `src/components/ContactSection.tsx`: Update your contact information
+
+### Styling
+
+The portfolio uses a custom color scheme defined in the Tailwind config:
+
+- `portfolio-primary`: Dark blue for main background
+- `portfolio-secondary`: Slightly lighter blue for cards
+- `portfolio-accent`: Light blue for accents
+- `portfolio-text`: White-ish text for main content
+- `portfolio-muted`: Muted gray text for less important content
+
+To modify the color scheme, edit the `tailwind.config.ts` file.
+
+## Deployment
+
+You can deploy this site to any static hosting service:
+
+- Netlify
+- Vercel
+- GitHub Pages
+- Firebase Hosting
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Contact
+
+- Email: contact@hassanali.dev
+- LinkedIn: [linkedin.com/in/hd-ali](https://www.linkedin.com/in/hd-ali/)
+- GitHub: [github.com/HDAli00](https://github.com/HDAli00)
