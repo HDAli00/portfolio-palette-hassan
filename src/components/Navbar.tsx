@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, FileText } from 'lucide-react';
@@ -6,11 +5,10 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/#about' },
-  { name: 'Experience', path: '/#experience' },
-  { name: 'Blogs', path: '/blogs' },
-  { name: 'Resume', path: '/resume.pdf', isExternal: true },
-  { name: 'Contact', path: '/#contact' }
+  { name: 'Blog', path: '/blogs' },
+  { name: 'About', path: '/about' },
+  { name: 'Contact', path: '/#contact' },
+  { name: 'Resume', path: '/resume.pdf', isExternal: true }
 ];
 
 const Navbar = () => {

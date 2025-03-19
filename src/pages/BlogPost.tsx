@@ -5,6 +5,8 @@ import { ArrowLeft, Github, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { blogs, Blog } from '@/data/BlogsData';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const BlogPost = () => {
   const { id } = useParams<{ id: string }>();
@@ -26,6 +28,8 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-portfolio-primary">
+      <Navbar />
+      
       <div className="container mx-auto px-4 md:px-8 pt-32 pb-24">
         {/* Breadcrumbs */}
         <Breadcrumb className="mb-10">
@@ -35,7 +39,7 @@ const BlogPost = () => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/blogs">Blogs</BreadcrumbLink>
+              <BreadcrumbLink href="/blogs">Blog</BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -46,7 +50,7 @@ const BlogPost = () => {
         
         <Link to="/blogs">
           <Button variant="ghost" className="mb-8 -ml-2 text-portfolio-muted hover:text-portfolio-accent">
-            <ArrowLeft size={16} className="mr-1" /> Back to Blogs
+            <ArrowLeft size={16} className="mr-1" /> Back to Blog
           </Button>
         </Link>
         
@@ -103,6 +107,8 @@ const BlogPost = () => {
           )}
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };

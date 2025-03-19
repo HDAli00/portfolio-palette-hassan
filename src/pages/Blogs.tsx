@@ -5,6 +5,8 @@ import { ExternalLink, Github, ArrowRight, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { blogs, getAllTechnologies } from '@/data/BlogsData';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 // Get all unique technologies for filtering
 const allTechnologies = getAllTechnologies();
@@ -18,6 +20,8 @@ const Blogs = () => {
 
   return (
     <div className="min-h-screen bg-portfolio-primary">
+      <Navbar />
+      
       <div className="container mx-auto px-4 md:px-8 pt-32 pb-24">
         {/* Breadcrumbs */}
         <Breadcrumb className="mb-10">
@@ -27,12 +31,12 @@ const Blogs = () => {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink>Blogs</BreadcrumbLink>
+              <BreadcrumbLink>Blog</BreadcrumbLink>
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
         
-        <h1 className="text-4xl font-bold mb-12 text-portfolio-text text-center">Technical Blogs</h1>
+        <h1 className="text-4xl font-bold mb-12 text-portfolio-text text-center">Technical Blog</h1>
         
         <div className="mb-14 flex flex-wrap gap-3 justify-center">
           <button 
@@ -104,6 +108,8 @@ const Blogs = () => {
           ))}
         </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
