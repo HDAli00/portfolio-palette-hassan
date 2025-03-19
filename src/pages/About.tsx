@@ -15,8 +15,25 @@ const About = () => {
       alt: "DP-600 Certification",
       title: "Microsoft DP-600",
       description: "Microsoft Certified: Azure Data Engineer Associate"
+    },
+    {
+      src: "/certificates/dp100.png",
+      alt: "DP-100 Certification",
+      title: "Microsoft DP-100",
+      description: "Microsoft Certified: Azure Data Scientist Associate"
+    },
+    {
+      src: "/certificates/AZ900.png",
+      alt: "AZ-900 Certification",
+      title: "Microsoft AZ-900",
+      description: "Microsoft Certified: Azure Fundamentals"
+    },
+    {
+      src: "/certificates/databricks.png",
+      alt: "Databricks Certification",
+      title: "Databricks",
+      description: "Certified Databricks Data Engineer Associate"
     }
-    // Note: Other certificates would be added here if they exist in the public/certificates folder
   ];
 
   return (
@@ -28,19 +45,21 @@ const About = () => {
           <h1 className="text-4xl font-bold mb-12 text-center text-portfolio-text">About Me</h1>
           
           <div className="max-w-4xl mx-auto">
-            <AboutSection />
+            <div className="bg-portfolio-secondary/60 p-8 rounded-lg shadow-sm mb-24">
+              <AboutSection />
+            </div>
             
             {/* Certifications Section */}
-            <div className="mt-24 bg-portfolio-secondary/30 p-8 rounded-lg">
+            <div className="bg-portfolio-secondary/60 p-8 rounded-lg shadow-sm mb-24">
               <h2 className="text-2xl font-bold mb-8 text-portfolio-text">Certifications</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {certificates.map((cert, index) => (
                   <div key={index} className="bg-portfolio-secondary p-5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <img 
                       src={cert.src} 
                       alt={cert.alt} 
-                      className="w-full h-auto rounded"
+                      className="w-full h-auto rounded border border-portfolio-secondary/50"
                     />
                     <h3 className="text-lg font-medium mt-4 mb-2 text-portfolio-text">{cert.title}</h3>
                     <p className="text-sm text-portfolio-muted">
@@ -51,7 +70,7 @@ const About = () => {
               </div>
             </div>
             
-            <div className="mt-24 bg-portfolio-secondary/30 p-8 rounded-lg">
+            <div className="bg-portfolio-secondary/60 p-8 rounded-lg shadow-sm mb-24">
               <ExperienceSection />
             </div>
             

@@ -67,13 +67,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for Hassan's portfolio
+				// Custom colors for Hassan's portfolio - updated to lighter blue shades
 				portfolio: {
-					'primary': '#0f172a',      // Dark blue for main background
-					'secondary': '#1e293b',    // Slightly lighter blue for cards
-					'accent': '#38bdf8',       // Light blue for accents
-					'text': '#f8fafc',         // White-ish text
-					'muted': '#94a3b8',        // Muted gray text
+					'primary': '#e6f2ff',      // Very light blue for main background (was #0f172a)
+					'secondary': '#cce4ff',    // Light blue for cards (was #1e293b)
+					'accent': '#1e90ff',       // Bright blue for accents (was #38bdf8)
+					'text': '#0f172a',         // Dark blue for text (was #f8fafc)
+					'muted': '#4a5568',        // Darker gray text (was #94a3b8)
 				}
 			},
 			borderRadius: {
