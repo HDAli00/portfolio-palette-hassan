@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { blogs, getAllTechnologies } from '@/data/BlogsData';
@@ -18,9 +18,9 @@ const Blogs = () => {
 
   return (
     <div className="min-h-screen bg-portfolio-primary">
-      <div className="container mx-auto px-4 md:px-6 pt-28 pb-20">
+      <div className="container mx-auto px-4 md:px-8 pt-32 pb-24">
         {/* Breadcrumbs */}
-        <Breadcrumb className="mb-8">
+        <Breadcrumb className="mb-10">
           <BreadcrumbList>
             <BreadcrumbItem>
               <BreadcrumbLink href="/">Home</BreadcrumbLink>
@@ -32,11 +32,11 @@ const Blogs = () => {
           </BreadcrumbList>
         </Breadcrumb>
         
-        <h1 className="text-4xl font-bold mb-8 text-portfolio-text">Technical Blogs</h1>
+        <h1 className="text-4xl font-bold mb-12 text-portfolio-text text-center">Technical Blogs</h1>
         
-        <div className="mb-10 flex flex-wrap gap-2">
+        <div className="mb-14 flex flex-wrap gap-3 justify-center">
           <button 
-            className={`px-3 py-1 text-sm rounded-full ${!filter ? 'bg-portfolio-accent text-white' : 'bg-portfolio-secondary text-portfolio-muted hover:bg-portfolio-primary'}`}
+            className={`px-4 py-2 text-sm rounded-full transition-colors ${!filter ? 'bg-portfolio-accent text-white' : 'bg-portfolio-secondary text-portfolio-muted hover:bg-portfolio-primary'}`}
             onClick={() => setFilter(null)}
           >
             All
@@ -44,7 +44,7 @@ const Blogs = () => {
           {allTechnologies.map((tech, index) => (
             <button 
               key={index}
-              className={`px-3 py-1 text-sm rounded-full ${filter === tech ? 'bg-portfolio-accent text-white' : 'bg-portfolio-secondary text-portfolio-muted hover:bg-portfolio-primary'}`}
+              className={`px-4 py-2 text-sm rounded-full transition-colors ${filter === tech ? 'bg-portfolio-accent text-white' : 'bg-portfolio-secondary text-portfolio-muted hover:bg-portfolio-primary'}`}
               onClick={() => setFilter(tech)}
             >
               {tech}
@@ -52,10 +52,10 @@ const Blogs = () => {
           ))}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {filteredBlogs.map((blog, index) => (
-            <div key={index} className="bg-portfolio-secondary rounded-lg p-6 shadow-lg hover:shadow-xl transition-all group">
-              <div className="aspect-video w-full mb-4 overflow-hidden rounded-lg">
+            <div key={index} className="bg-portfolio-secondary rounded-lg p-8 shadow-lg hover:shadow-xl transition-all group">
+              <div className="aspect-video w-full mb-6 overflow-hidden rounded-lg">
                 <img 
                   src={blog.image} 
                   alt={blog.title} 
@@ -63,13 +63,18 @@ const Blogs = () => {
                 />
               </div>
               
-              <h3 className="text-xl font-semibold mb-2 text-portfolio-text">{blog.title}</h3>
+              <div className="flex items-center mb-4 text-portfolio-muted text-sm">
+                <Calendar size={14} className="mr-2" />
+                <span>{blog.date}</span>
+              </div>
               
-              <p className="text-portfolio-muted mb-4">{blog.description}</p>
+              <h3 className="text-2xl font-semibold mb-4 text-portfolio-text">{blog.title}</h3>
               
-              <div className="flex flex-wrap gap-2 mb-4">
+              <p className="text-portfolio-muted mb-6">{blog.description}</p>
+              
+              <div className="flex flex-wrap gap-2 mb-6">
                 {blog.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="bg-portfolio-primary px-2 py-1 rounded text-xs text-portfolio-muted">
+                  <span key={techIndex} className="bg-portfolio-primary px-3 py-1 rounded text-xs text-portfolio-muted">
                     {tech}
                   </span>
                 ))}
@@ -91,7 +96,7 @@ const Blogs = () => {
                 
                 <Link to={`/blogs/${blog.id}`}>
                   <Button variant="ghost" className="text-portfolio-accent hover:text-portfolio-accent hover:bg-portfolio-primary/40">
-                    Read More <ArrowRight size={16} />
+                    Read More <ArrowRight size={16} className="ml-2" />
                   </Button>
                 </Link>
               </div>
