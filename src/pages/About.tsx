@@ -8,39 +8,50 @@ import ExperienceSection from '@/components/ExperienceSection';
 import { Link } from 'react-router-dom';
 
 const About = () => {
+  // List of certificates - this would ideally come from a backend or API
+  const certificates = [
+    {
+      src: "/certificates/dp600.webp",
+      alt: "DP-600 Certification",
+      title: "Microsoft DP-600",
+      description: "Microsoft Certified: Azure Data Engineer Associate"
+    }
+    // Note: Other certificates would be added here if they exist in the public/certificates folder
+  ];
+
   return (
     <div className="min-h-screen bg-portfolio-primary text-portfolio-text">
       <Navbar />
       
-      <main className="pt-28 pb-20">
+      <main className="pt-28 pb-20 bg-portfolio-primary">
         <div className="container mx-auto px-4 md:px-8 mb-16">
-          <h1 className="text-4xl font-bold mb-8 text-center text-portfolio-text">About Me</h1>
+          <h1 className="text-4xl font-bold mb-12 text-center text-portfolio-text">About Me</h1>
           
           <div className="max-w-4xl mx-auto">
             <AboutSection />
             
             {/* Certifications Section */}
-            <div className="mt-20">
+            <div className="mt-24 bg-portfolio-secondary/30 p-8 rounded-lg">
               <h2 className="text-2xl font-bold mb-8 text-portfolio-text">Certifications</h2>
               
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <div className="bg-portfolio-secondary p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                  <img 
-                    src="/certificates/dp600.webp" 
-                    alt="DP-600 Certification" 
-                    className="w-full h-auto rounded"
-                  />
-                  <h3 className="text-lg font-medium mt-4 mb-2 text-portfolio-text">Microsoft DP-600</h3>
-                  <p className="text-sm text-portfolio-muted">
-                    Microsoft Certified: Azure Data Engineer Associate
-                  </p>
-                </div>
-                
-                {/* More certification cards can be added here */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {certificates.map((cert, index) => (
+                  <div key={index} className="bg-portfolio-secondary p-5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <img 
+                      src={cert.src} 
+                      alt={cert.alt} 
+                      className="w-full h-auto rounded"
+                    />
+                    <h3 className="text-lg font-medium mt-4 mb-2 text-portfolio-text">{cert.title}</h3>
+                    <p className="text-sm text-portfolio-muted">
+                      {cert.description}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
             
-            <div className="mt-20">
+            <div className="mt-24 bg-portfolio-secondary/30 p-8 rounded-lg">
               <ExperienceSection />
             </div>
             

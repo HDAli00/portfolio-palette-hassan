@@ -11,11 +11,11 @@ const technologies = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-portfolio-secondary/30">
+    <section id="about" className="py-10 bg-portfolio-secondary/30 rounded-lg mb-24">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="section-heading">About Me</h2>
+        <h2 className="section-heading mb-10">About Me</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 gap-12">
           <div>
             <p className="text-portfolio-text leading-relaxed mb-6">
               I'm a Data Engineer with expertise in designing and implementing data pipelines, ETL processes, 
@@ -34,67 +34,23 @@ const AboutSection = () => {
             </p>
           </div>
           
-          <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="bg-portfolio-secondary p-5 rounded-lg">
-                <div className="bg-portfolio-primary/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Database size={24} className="text-portfolio-accent" />
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold mb-8 text-portfolio-text">Technologies I Work With</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {technologies.map((tech, index) => (
+                <div key={index} className="bg-portfolio-secondary p-5 rounded-lg hover:shadow-lg transition-all duration-300">
+                  <h4 className="text-lg font-medium mb-4 text-portfolio-accent">{tech.category}</h4>
+                  <ul className="space-y-2">
+                    {tech.skills.map((skill, skillIndex) => (
+                      <li key={skillIndex} className="text-portfolio-muted flex items-center">
+                        <span className="w-1.5 h-1.5 bg-portfolio-accent rounded-full mr-2"></span>
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">Data Engineering</h3>
-                <p className="text-portfolio-muted text-sm">
-                  Building robust ETL pipelines and data processing systems with Python, Spark, and Airflow.
-                </p>
-              </div>
-              
-              <div className="bg-portfolio-secondary p-5 rounded-lg">
-                <div className="bg-portfolio-primary/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Server size={24} className="text-portfolio-accent" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Cloud & Big Data</h3>
-                <p className="text-portfolio-muted text-sm">
-                  Implementing scalable data solutions on AWS, Azure, and using technologies like Snowflake and Databricks.
-                </p>
-              </div>
-              
-              <div className="bg-portfolio-secondary p-5 rounded-lg">
-                <div className="bg-portfolio-primary/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <BarChart size={24} className="text-portfolio-accent" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Data Analytics</h3>
-                <p className="text-portfolio-muted text-sm">
-                  Creating data models and analytics solutions to derive meaningful insights from complex datasets.
-                </p>
-              </div>
-              
-              <div className="bg-portfolio-secondary p-5 rounded-lg">
-                <div className="bg-portfolio-primary/50 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Layers size={24} className="text-portfolio-accent" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Data Architecture</h3>
-                <p className="text-portfolio-muted text-sm">
-                  Designing scalable and efficient data warehouses and data lakes for optimal performance.
-                </p>
-              </div>
+              ))}
             </div>
-          </div>
-        </div>
-        
-        <div className="mt-16">
-          <h3 className="text-xl font-semibold mb-6">Technologies I Work With</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map((tech, index) => (
-              <div key={index} className="bg-portfolio-secondary p-5 rounded-lg">
-                <h4 className="text-lg font-medium mb-4 text-portfolio-accent">{tech.category}</h4>
-                <ul className="space-y-2">
-                  {tech.skills.map((skill, skillIndex) => (
-                    <li key={skillIndex} className="text-portfolio-muted flex items-center">
-                      <span className="w-1.5 h-1.5 bg-portfolio-accent rounded-full mr-2"></span>
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
         </div>
       </div>
